@@ -1,0 +1,30 @@
+@import "~style/root";
+
+.app-ProductPage-container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 170px auto;
+  &__block-select {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__block-product {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+  }
+  @include media(until-tablet) {
+    &__block-select {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    &__block-product {
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: space-evenly;
+      & div {
+        margin: 50px 0;
+      }
+    }
+  }
+}

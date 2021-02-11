@@ -1,0 +1,59 @@
+@import "~style/root";
+
+.select-block {
+  display: flex;
+  justify-content: space-between;
+  width: 178px;
+  border-bottom: 1px solid black;
+  padding: 10px 0;
+  position: relative;
+  &__bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 178px;
+    height: 139px;
+    color: white;
+    background: #780202;
+    position: absolute;
+    z-index: 5;
+    bottom: -150px;
+    visibility: hidden;
+    transition: 0.3s;
+  }
+  &__bar p {
+    padding: 5px 0;
+  }
+  &:hover &__icon {
+    transform: rotate(90deg);
+    transition: 0.4s;
+  }
+  &:hover &__bar {
+    visibility: visible;
+  }
+}
+@include media(until-tablet) {
+  .select-block {
+    display: flex;
+    width: 140px;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+    position: relative;
+    &__bar {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 139px;
+      color: white;
+      background: #780202;
+      position: absolute;
+      z-index: 5;
+      bottom: -150px;
+      visibility: hidden;
+      transition: 0.3s;
+    }
+  }
+}

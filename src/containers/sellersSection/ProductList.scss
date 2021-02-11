@@ -1,0 +1,40 @@
+@import "~style/root";
+
+.app-ProductList-container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 200px auto;
+  text-align: center;
+  position: relative;
+  &__block-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    font-size: 36px;
+    color: #780202;
+    margin: 75px;
+  }
+  &__block-arrow {
+    position: absolute;
+    bottom: -200px;
+    right: 0;
+    & p {
+      font-size: 18px;
+      margin-left: 100px;
+    }
+  }
+  @include media(until-tablet) {
+    &__block-list {
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: space-evenly;
+      & div {
+        margin: 50px 0;
+      }
+    }
+    &__block-arrow {
+      display: none;
+    }
+  }
+}

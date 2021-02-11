@@ -1,0 +1,28 @@
+.block-arrow {
+  width: 95px;
+  position: relative;
+  padding: 10px;
+  margin-left: 100px;
+  &__line {
+    border: 1px solid #780202;
+    box-sizing: border-box;
+  }
+  &__top {
+    width: 10px;
+    border: 1px solid #780202;
+    box-sizing: border-box;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 7px;
+    top: 7px;
+  }
+  &__botoom {
+    width: 10px;
+    border: 1px solid #780202;
+    box-sizing: border-box;
+    transform: rotate(140deg);
+    position: absolute;
+    right: 7px;
+    top: 13px;
+  }
+}

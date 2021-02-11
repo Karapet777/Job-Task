@@ -1,0 +1,83 @@
+@import "~style/root";
+
+.app-header-container {
+  position: fixed;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  height: $header-size;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: 0.5s;
+
+  &__nav {
+    width: 100%;
+    max-width: 1170px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    &__your {
+      position: absolute;
+      top: 0px;
+      left: 0;
+    }
+    &__logo {
+      position: absolute;
+      top: 28px;
+      left: 34px;
+      width: 164px;
+      height: 34px;
+    }
+
+    &__searchIcon {
+      width: 29px;
+    }
+  }
+  &__nav ul {
+    display: flex;
+  }
+  &__nav li {
+    font-size: 24px;
+    padding-left: 30px;
+    cursor: pointer;
+  }
+  @include media(until-tablet) {
+    .app-header-container {
+      height: 65px;
+    }
+    &__nav {
+      width: 100%;
+      max-width: 800px;
+      justify-content: space-evenly;
+
+      &__logo {
+        left: 0px;
+        top: 22px;
+        width: 100px;
+        height: 34px;
+      }
+      &__your {
+        width: 50px;
+        top: 0px;
+        left: -10px;
+      }
+    }
+    &__nav li {
+      font-size: 20px;
+    }
+  }
+}
+.activ {
+  background-color: white;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  transition: 0.9s;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
